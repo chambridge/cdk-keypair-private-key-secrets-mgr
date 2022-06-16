@@ -66,7 +66,7 @@ class ExampleNetworkStack(Stack):
                 iam.ManagedPolicy.from_aws_managed_policy_name("service-role/AWSLambdaBasicExecutionRole"),
                 iam.ManagedPolicy.from_aws_managed_policy_name("SecretsManagerReadWrite"),
             ],
-            inline_policies={f"{ec2_lambda_role_name}-keypair-policay": custom_policy_document},
+            inline_policies={f"{ec2_lambda_role_name}-keypair-policy": custom_policy_document},
         )
 
         lambda_sg_name = "ec2-keypair-lambda-sg"
